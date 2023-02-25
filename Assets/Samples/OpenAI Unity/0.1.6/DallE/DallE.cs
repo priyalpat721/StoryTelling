@@ -12,11 +12,14 @@ namespace OpenAI
         [SerializeField] private Image image;
         [SerializeField] private GameObject loadingLabel;
 
-        private OpenAIApi openai = new OpenAIApi("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");
+        private OpenAIApi openai = new OpenAIApi("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");
 
         private void Start()
         {
-            button.onClick.AddListener(SendImageRequest);
+            if (button != null)
+            {
+                button.onClick.AddListener(SendImageRequest);
+            }
         }
 
         private async void SendImageRequest()
