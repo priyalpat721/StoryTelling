@@ -1,3 +1,4 @@
+using Meta.WitAi.TTS.Utilities;
 using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
@@ -10,7 +11,8 @@ namespace OpenAI
     public class ChatGPT : MonoBehaviour
     {
         [SerializeField] private TMP_Text inputField;
-        [SerializeField] private Text textArea;
+        [SerializeField] private TMP_Text textArea;
+        [SerializeField] private TTSSpeaker speaker;
         public InputActionReference input;
 
 
@@ -38,6 +40,11 @@ namespace OpenAI
             SendReply();
         }
 
+        public void SendReplyFromMic()
+        {
+            SendReply();
+        }
+
         private async void SendReply()
         {
             userInput = inputField.text;
@@ -61,6 +68,7 @@ namespace OpenAI
 
             if (completionResponse.Choices != null && completionResponse.Choices.Count > 0)
             {
+                speaker.Speak(completionResponse.Choices[0].Text);
                 textArea.text = completionResponse.Choices[0].Text;
                 if (textArea.text != null)
                 {
