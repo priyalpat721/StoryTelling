@@ -1207,9 +1207,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83764466e83f8aa40b421e5af75b1b49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputField: {fileID: 120664641}
-  button: {fileID: 1796900105}
+  inputField: {fileID: 0}
   textArea: {fileID: 368199125}
+  input: {fileID: 0}
   image: {fileID: 516556955}
   loadingLabel: {fileID: 2031642435}
 --- !u!4 &599041897
@@ -1755,6 +1755,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51cf143b6adab49e6acd57fbc4e64d58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  input: {fileID: 0}
 --- !u!114 &971952098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2876,6 +2877,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f80c4b426db6c45f9a067b5584771159, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _title: {fileID: 0}
+  _input: {fileID: 0}
+  _speaker: {fileID: 0}
+  _stopButton: {fileID: 0}
+  _speakButton: {fileID: 0}
+  _speakQueuedButton: {fileID: 0}
+  _queuedText: []
+  _loading: 0
+  _speaking: 0
 --- !u!1 &1668615271
 GameObject:
   m_ObjectHideFlags: 0
