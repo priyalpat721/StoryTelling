@@ -1652,6 +1652,54 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Custom",
+            "id": "3f1e7372-fecd-4c13-bd5c-fd2ff11dc5b3",
+            "actions": [
+                {
+                    "name": "Mic",
+                    "type": "Button",
+                    "id": "43518f25-202d-4753-9f19-acc03a99a847",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SendToGPT",
+                    "type": "Button",
+                    "id": "69df4ce6-14dc-49d5-92bc-5e8389d5828a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ec9971c8-e669-4b3f-b558-a4215889da9b",
+                    "path": "*/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Mic",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0c741fde-7425-4fe9-a50b-9bd7379d0489",
+                    "path": "*/{SecondaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SendToGPT",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [

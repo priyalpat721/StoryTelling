@@ -1,5 +1,7 @@
 using System.Threading.Tasks;
+using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 
@@ -7,9 +9,9 @@ namespace OpenAI
 {
     public class ChatGPT : MonoBehaviour
     {
-        [SerializeField] private InputField inputField;
-        [SerializeField] private Button button;
+        [SerializeField] private TMP_Text inputField;
         [SerializeField] private Text textArea;
+        public InputActionReference input;
 
 
         [SerializeField] private Image image;
@@ -20,25 +22,32 @@ namespace OpenAI
         private string userInput;
         private string Instruction = "Act as a random stranger in a chat room and reply to the questions.\nQ: ";
 
-        private void Start()
+        private void Awake()
         {
-            if (button != null)
-            {
-                button.onClick.AddListener(SendReply);
-            }
+            input.action.started += SendReplyFromMic;
+        }
+
+        private void OnDestroy()
+        {
+            input.action.started -= SendReplyFromMic;
+        }
+
+
+        public void SendReplyFromMic(InputAction.CallbackContext context)
+        {
+            SendReply();
         }
 
         private async void SendReply()
         {
             userInput = inputField.text;
             Instruction += $"{userInput}\nA: ";
-            
+
             textArea.text = "...";
             inputField.text = "";
 
-            button.enabled = false;
             inputField.enabled = false;
-            
+
             // Complete the instruction
             var completionResponse = await openai.CreateCompletion(new CreateCompletionRequest()
             {
@@ -48,7 +57,7 @@ namespace OpenAI
             });
 
 
-            
+
 
             if (completionResponse.Choices != null && completionResponse.Choices.Count > 0)
             {
@@ -64,7 +73,6 @@ namespace OpenAI
                 Debug.LogWarning("No text was generated from this prompt.");
             }
 
-            button.enabled = true;
             inputField.enabled = true;
         }
 
@@ -100,7 +108,6 @@ namespace OpenAI
                 Debug.LogWarning("No image was created from this prompt.");
             }
 
-            button.enabled = true;
             inputField.enabled = true;
             loadingLabel.SetActive(false);
         }
