@@ -38,11 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-<<<<<<< Updated upstream
   m_IndirectSpecularColor: {r: 0.009974741, g: 0.017892096, b: 0.016478822, a: 1}
-=======
-  m_IndirectSpecularColor: {r: 0.009920303, g: 0.017885724, b: 0.01607318, a: 1}
->>>>>>> Stashed changes
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1189,7 +1185,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-<<<<<<< Updated upstream
 --- !u!1 &530461138
 GameObject:
   m_ObjectHideFlags: 0
@@ -1474,8 +1469,6 @@ MonoBehaviour:
     speed: 100
     pitch: 100
     gain: 50
-=======
->>>>>>> Stashed changes
 --- !u!1 &599041895
 GameObject:
   m_ObjectHideFlags: 0
@@ -1916,8 +1909,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
-=======
->>>>>>> Stashed changes
 --- !u!1 &906702924
 GameObject:
   m_ObjectHideFlags: 0
@@ -2971,8 +2962,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
-=======
->>>>>>> Stashed changes
 --- !u!1 &1229647484
 GameObject:
   m_ObjectHideFlags: 0
@@ -3827,10 +3816,8 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1551407168
 GameObject:
-=======
 --- !u!1001 &1475255837
 PrefabInstance:
->>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
@@ -4842,8 +4829,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ead42e0472b7547fbba6c229aeaf37d3, type: 3}
-=======
->>>>>>> Stashed changes
 --- !u!1 &1668615271
 GameObject:
   m_ObjectHideFlags: 0
@@ -6049,8 +6034,6 @@ MonoBehaviour:
   m_CaretWidth: 1
   m_ReadOnly: 0
   m_ShouldActivateOnSelect: 1
-=======
->>>>>>> Stashed changes
 --- !u!1 &2031642435
 GameObject:
   m_ObjectHideFlags: 0
