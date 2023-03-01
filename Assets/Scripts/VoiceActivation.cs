@@ -2,18 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Oculus.Voice;
-<<<<<<< Updated upstream
-
-
-public class VoiceActivation : MonoBehaviour
-{
-=======
 using UnityEngine.InputSystem;
 
 public class VoiceActivation : MonoBehaviour
 {
     public InputActionReference input;
->>>>>>> Stashed changes
     private AppVoiceExperience _voiceExperience;
     private void OnValidate()
     {
@@ -22,10 +15,7 @@ public class VoiceActivation : MonoBehaviour
 
     private void Awake()
     {
-<<<<<<< Updated upstream
-        
-    }
-=======
+
         input.action.started += ActivateWitMic;
         input.action.canceled += DeactivateWitMic;
 
@@ -38,7 +28,6 @@ public class VoiceActivation : MonoBehaviour
 
     }
 
->>>>>>> Stashed changes
     private void Start()
     {
         _voiceExperience = GetComponent<AppVoiceExperience>();
@@ -55,8 +44,6 @@ public class VoiceActivation : MonoBehaviour
         }
     }
 
-<<<<<<< Updated upstream
-=======
     public void ActivateWitMic(InputAction.CallbackContext context)
     {
         ActivateWit();
@@ -67,7 +54,6 @@ public class VoiceActivation : MonoBehaviour
         DeactivateWit();
     }
 
->>>>>>> Stashed changes
     /// <summary>
     /// Activates Wit i.e. start listening to the user.
     /// </summary>
@@ -80,8 +66,4 @@ public class VoiceActivation : MonoBehaviour
     {
         _voiceExperience.Deactivate();
     }
-<<<<<<< Updated upstream
 }
-=======
-}
->>>>>>> Stashed changes
